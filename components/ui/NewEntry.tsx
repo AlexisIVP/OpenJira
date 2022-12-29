@@ -4,11 +4,12 @@ import SaveOutlinedIcon from "@mui/icons-material/SaveOutlined";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 
 import { EntriesContext } from "../../context/entries";
-import { UIContext } from '../../context/ui/UIContext';
+import { UIContext } from "../../context/ui/UIContext";
+
 
 export const NewEntry = () => {
   const { addNewEntry } = useContext(EntriesContext);
-  const {isAddingEntry,setIsAddingEntry} = useContext(UIContext)
+  const { isAddingEntry, setIsAddingEntry } = useContext(UIContext);
 
   const [inputValue, setInputValue] = useState("");
   const [touched, setTouched] = useState(false);
@@ -25,6 +26,8 @@ export const NewEntry = () => {
     setIsAddingEntry(false);
     setTouched(false);
     setInputValue("");
+ 
+   
   };
 
   return (
